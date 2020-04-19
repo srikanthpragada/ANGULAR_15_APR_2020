@@ -1,0 +1,13 @@
+<h2>Discount Calculation</h2>
+
+Product Price <br/>
+<input type="number" #price />
+<p></p>
+Discount Rate <br/>
+<input type="number" #disrate />
+<p></p>
+<button (click)="calculate(price.value, disrate.value)">Calculate</button>
+<h3 *ngIf="discount > 0">{{discount}}</h3>
+
+
+

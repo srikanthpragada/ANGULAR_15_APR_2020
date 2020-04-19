@@ -1,15 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HelloComponent } from './hello.component';
+import { DiscountComponent } from './discount/discount.component';
  
 @NgModule({
   declarations: [ 
-    HelloComponent
+    DiscountComponent
   ],
   imports: [
     BrowserModule
   ],
   providers: [],
-  bootstrap: [HelloComponent] 
+  bootstrap: [DiscountComponent] 
 })
 export class AppModule { }
