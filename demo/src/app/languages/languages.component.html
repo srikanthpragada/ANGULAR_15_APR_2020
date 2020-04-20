@@ -1,0 +1,25 @@
+<h2>Languages</h2>
+
+Language Name <br/>
+<input type="text" size="20" #lang  />
+<p></p>
+Rating (1-5) <br/>
+<input type="number"  #rating />
+<p></p>
+<button (click)="addLang(lang.value,rating.value)">Add</button>
+<p></p>
+
+<table border="1" cellpadding="5px">
+    <tr>
+        <th>Language Name</th>
+        <th>Rating</th>
+        <th></th>
+    </tr>
+    <tr *ngFor="let lang of langs">
+        <td>{{lang.name}}</td>
+        <td>{{lang.rating}}</td>
+        <td><button (click)="deleteLang(lang.name)">Delete</button></td>
+    </tr>
+</table>
+
+

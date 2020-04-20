@@ -1,12 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Language } from './Language'
 
 @Component({
-    selector: 'app-name',
-    template: ``,
-    styles: [``]
+    selector: 'st-lang',
+    templateUrl: './languages.component.html'
 })
-export class NameComponent implements OnInit {
-    constructor() { }
+export class LanguagesComponent {
+    langs : Language[]  = [];
 
-    ngOnInit(): void { }
+    addLang(name : string, rating : number) {
+        this.langs.push( new Language(name,rating))
+        console.log(this.langs)
+    }
+
+    deleteLang(name : string) {
+        console.log(name)
+    }
+
+    
 }

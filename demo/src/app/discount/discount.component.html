@@ -6,7 +6,8 @@ Product Price <br/>
 Discount Rate <br/>
 <input type="number" #disrate />
 <p></p>
-<button (click)="calculate(price.value, disrate.value)">Calculate</button>
+<input type="checkbox" #round/>Round value<p></p>
+<button (click)="calculate(price.value, disrate.value, round.checked)">Calculate</button>
 <h3 *ngIf="discount > 0">{{discount}}</h3>
 
 
