@@ -9,16 +9,17 @@ Rating (1-5) <br/>
 <button (click)="addLang(lang.value,rating.value)">Add</button>
 <p></p>
 
-<table border="1" cellpadding="5px">
+
+<table border="1" cellpadding="5px" *ngIf="langs.length > 0">
     <tr>
         <th>Language Name</th>
         <th>Rating</th>
         <th></th>
     </tr>
-    <tr *ngFor="let lang of langs">
+    <tr *ngFor="let lang of langs;let i = index">
         <td>{{lang.name}}</td>
         <td>{{lang.rating}}</td>
-        <td><button (click)="deleteLang(lang.name)">Delete</button></td>
+        <td><button (click)="deleteLang(i)">Delete</button></td>
     </tr>
 </table>
 

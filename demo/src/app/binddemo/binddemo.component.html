@@ -1,9 +1,31 @@
+<style>
+    .banner { 
+        font-size:30pt;
+    }
+    .red {
+        color:red;
+    }
+</style>
+
 <h2>Binding Demo</h2>
 
 <!-- Property Binidng -->
 <h1 [innerHTML]="message"></h1>
 <h1 innerHTML="{{message}}"></h1>
 
-
 <!-- Attribute Binidng -->
 <input type="text" [attr.value]="message" />
+
+<p></p>
+<input type="checkbox" #red>Red Color
+<p></p>
+<!-- Class Binding -->
+<div [class.banner]="banner"  [class.red]="red.checked">Srikanth Technologies</div>
+
+<!-- Style Binding, Event Binding -->
+<div [style.background-color]="'lightgray'" (mouseover)="showMouse($event)">
+    This is first line.
+    <p></p>
+    This is second line.
+</div>
+
