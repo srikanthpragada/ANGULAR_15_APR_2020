@@ -7,6 +7,12 @@ import { Language } from './Language'
 })
 export class LanguagesComponent {
     langs : Language[]  = [];
+    ratings : number[] = [];
+
+    constructor(){
+        for (var i = 1; i <= 10; i ++)
+              this.ratings.push(i)
+    }
 
     addLang(name : string, rating : number) {
         // check whether name is present
