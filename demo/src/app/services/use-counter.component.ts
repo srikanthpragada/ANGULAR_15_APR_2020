@@ -9,17 +9,19 @@ import { CounterService } from './CounterService';
 export class UseCounterComponent implements OnInit {
 
     // DI 
-    constructor(private counter : CounterService) { 
-         
+    constructor(private counterService : CounterService) { 
+         console.log("UseCounterComponent Constructor()")
     }    
 
     incCounter() {
-        this.counter.inc() 
+        this.counterService.inc() 
     }
 
     decCounter() {
-        this.counter.dec() 
+        this.counterService.dec() 
     }
 
-    ngOnInit(): void { }
+    ngOnInit(): void {
+        console.log("UseCounterComponent ngOnInit()")
+     }
 }

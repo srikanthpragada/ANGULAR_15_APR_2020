@@ -1,17 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ProductsListComponent } from './icc/products-list.component';
-import { ProductDetailsComponent } from './icc/product-details.component';
+import { UseCounterComponent } from './services/use-counter.component';
+import { CounterService } from './services/CounterService';
+import { UseCounterComponent2 } from './services/use-counter2.component';
 
  
 @NgModule({
   declarations: [ 
-       ProductsListComponent, ProductDetailsComponent
+        UseCounterComponent, UseCounterComponent2
   ],
   imports: [
     BrowserModule
   ],
-  providers: [],
-  bootstrap: [ProductsListComponent] 
+  providers: [CounterService],
+  bootstrap: [UseCounterComponent, UseCounterComponent2] 
 })
 export class AppModule { }

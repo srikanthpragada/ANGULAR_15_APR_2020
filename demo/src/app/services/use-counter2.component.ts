@@ -6,7 +6,7 @@ import { CounterService } from './CounterService';
     templateUrl: './use-counter2.component.html'
     // providers : [ CounterService ]
 })
-export class UseCounter2Component implements OnInit {
+export class UseCounterComponent2 implements OnInit {
 
     // DI 
     constructor(private counter : CounterService) { 
