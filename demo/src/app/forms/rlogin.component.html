@@ -1,0 +1,27 @@
+
+<style>
+   input.ng-invalid { color :red}
+</style>
+<h1>Reactive Login </h1>
+
+<form [formGroup]="loginForm"  novalidate>
+    Username <br/>
+    <input type="text"  formControlName="username"/>
+    <span *ngIf="loginForm.controls.username.dirty && loginForm.controls.username.errors?.required">
+           Username must be entered!
+    </span>
+    <p></p>
+    Password <br/>
+    <input type="password" formControlName="password" />
+    <span *ngIf="loginForm.controls.password.dirty && 
+            loginForm.controls.password.errors?.required">Password is required </span>
+            
+     <span *ngIf="loginForm.controls.password.dirty && 
+                     loginForm.controls.password.errors?.mustHaveStar">
+           Pasword must have star
+    </span>
+    <p></p>
+    <input type="submit" value="Login" (click)="login()"/>
+</form>    
+
+{{loginForm.controls.password.errors | json}}
