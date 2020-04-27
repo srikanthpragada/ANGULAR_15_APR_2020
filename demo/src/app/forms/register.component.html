@@ -21,7 +21,7 @@
 
     <p></p>
     User's Age  <br/>
-    <input type="number" [(ngModel)]="age" name="age" required min="18"
+    <input type="number" [(ngModel)]="age" name="age" required 
           #agerv="ngModel" />
           <span *ngIf="regForm.submitted">
              <span *ngIf="agerv.errors?.required">Missing Age</span>
